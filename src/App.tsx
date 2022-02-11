@@ -1,22 +1,16 @@
-import './App.css';
+import { GlobalStyle } from './GlobalStyle'
+import Layout from './Layout'
+import Balance from './components/Balance'
+import Header from './components/Header'
 
 export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello World</h1>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <GlobalStyle />
+      <Layout>
+        <Header />
+        <Balance title='Your Balance' balance={200} />
+      </Layout>
+    </>
+  )
 }
